@@ -18,7 +18,7 @@ class C0772144Main{
         System.out.println("Input  : Failure will never overtake me if my determination to succeed is strong enough");
         System.out.println("Output : " + rev);
 
-        rev = LambtonStringTools.reverse(null);
+        rev = LambtonStringTools.reverse();
         System.out.println("Input  : NULL");
         if(rev == null)
         {

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.lambton;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -13,9 +14,23 @@ public class LambtonStringTools
 {
     //1 - REVERSE STRING
     public static String reverse(String s)
-    {
 
-        return null;
+    {
+        Pattern pattern = Pattern.compile("\\str");
+
+        // splitting String str with a pattern
+        // (i.e )splitting the string whenever their
+        //  is whitespace and store in temp array.
+        String[] temp = pattern.split(s);
+        String result = " ";
+        for (int i = 0; i < s.length(); i++) {
+            if (i == s.length() - 1) {
+                result = s[i] + result;
+            }
+            else
+                result = " " + s[i] + result;
+        }
+        return result;
     }
     
     //2 - FORMAT INITIALS OF STRING
