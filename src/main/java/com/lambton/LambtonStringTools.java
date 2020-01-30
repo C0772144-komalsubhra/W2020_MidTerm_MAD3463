@@ -90,7 +90,7 @@ public class LambtonStringTools
         int n = 0;
         while (true) {
             if(s.equals(0)){
-     break;
+             break;
             }else{
                 int temp = s%10;
                 decimal += temp*Math.pow(2, n);
@@ -104,6 +104,8 @@ public class LambtonStringTools
     //5 - REPLACING SUBSTRING WITH NEW STRING IN EXISTING STRING
     public static String replaceSubString(String originalString, String findString, String newString) 
     {
-        return null;
+     findString=  originalString.replace(originalString,findString);
+     newString=findString.replace(findString,newString);
+        return newString;
     }
 }
