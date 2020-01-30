@@ -76,18 +76,17 @@ public class LambtonStringTools
     //4 - CONVERT BINARY NUMBER TO DECIMALS
     public static int binaryToDecimal(String s) {
         int decimal = 0;
-        int n = 0;
-        while (true) {
-            if(s.equals(0)){
-             break;
-            }else{
-                int temp = 
-                decimal += temp*Math.pow(2, n);
+        int p = 0;
+        while(true){
+            if(s == 0){
+                break;
+            } else {
+                int temp = s%10;
+                decimal += temp*Math.pow(2, p);
                 s = s/10;
-                n++;
-
+                p++;
             }
-            }
+        }
         return decimal;
     }
     //5 - REPLACING SUBSTRING WITH NEW STRING IN EXISTING STRING
