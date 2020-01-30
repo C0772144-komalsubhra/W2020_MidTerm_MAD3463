@@ -92,8 +92,10 @@ public class LambtonStringTools
     //5 - REPLACING SUBSTRING WITH NEW STRING IN EXISTING STRING
     public static String replaceSubString(String originalString, String findString, String newString) 
     {
+
      findString=  originalString.replace(originalString,findString);
      newString=findString.replace(findString,newString);
         return newString;
     }
+
 }
