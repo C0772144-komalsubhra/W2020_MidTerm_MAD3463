@@ -78,7 +78,7 @@ public class LambtonStringTools
         int decimal = 0;
         int p = 0;
         while(true){
-            if(s == 0){
+            if(s.equals(0)){
                 break;
             } else {
                 int temp = s%10;
