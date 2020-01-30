@@ -81,7 +81,7 @@ public class LambtonStringTools
             if(s.equals(0)){
                 break;
             } else {
-                int temp = s%10;
+                int temp =s%10;
                 decimal += temp*Math.pow(2, p);
                 s = s/10;
                 p++;
