@@ -5,6 +5,8 @@
  */
 package com.lambton;
 
+import java.util.Objects;
+
 /**
  *
  * @author Pritesh Patel
@@ -68,25 +70,37 @@ public class LambtonStringTools
             count[s.charAt(i)]++;
 
         int max = -1;
-        char result = ' ';
+        char mostFrequent=' ';
 
 
         for (int i = 0; i < len; i++) {
             if (max < count[s.charAt(i)]) {
                 max = count[s.charAt(i)];
-                result = s.charAt(i);
+                mostFrequent= (char) max;
             }
         }
 
-        return result;
+        return mostFrequent;
     }
-    
+
+
     //4 - CONVERT BINARY NUMBER TO DECIMALS
-    public static int binaryToDecimal(String s) 
-    {
-       return 0;
+    public static int binaryToDecimal(String s) {
+        int decimal = 0;
+        int n = 0;
+        while (true) {
+            if(s.equals(0)){
+     break;
+            }else{
+                int temp = s%10;
+                decimal += temp*Math.pow(2, n);
+                s = s/10;
+                n++;
+
+            }
+            }
+        return decimal;
     }
-     
     //5 - REPLACING SUBSTRING WITH NEW STRING IN EXISTING STRING
     public static String replaceSubString(String originalString, String findString, String newString) 
     {
