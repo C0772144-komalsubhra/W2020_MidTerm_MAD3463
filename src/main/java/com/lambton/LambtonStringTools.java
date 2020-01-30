@@ -14,27 +14,16 @@ import java.util.Objects;
 public class LambtonStringTools
 {
     //1 - REVERSE STRING
+
    public static String reverse(String s) {
-       int c = 1;
-       int j = 1;
-       for (int i = 0; i < s.length(); i++) {
-           if (s.charAt(i) == ' ') {
-               c++;
-           }
-           String s1[] = new String[c];
-           String s2 = "";
-           for (j = 0; i < s1.length; j++) {
-               s1[i] = "";
-               while (j < s.length()) {
+       String rev = "";
+       int length = s.length();
 
-               }
-           }
-       }
-       return s;
+       for (int i = length - 1 ; i >= 0 ; i--)
+           rev = rev + s.charAt(i);
+         return rev;
+
    }
-
-
-
 
     
     //2 - FORMAT INITIALS OF STRING
