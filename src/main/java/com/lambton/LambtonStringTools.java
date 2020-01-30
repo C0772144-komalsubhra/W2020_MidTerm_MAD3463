@@ -4,46 +4,81 @@
  * and open the template in the editor.
  */
 package com.lambton;
-import java.util.regex.Pattern;
 
 /**
  *
  * @author Pritesh Patel
  */
-public class LambtonStringTools 
+public class LambtonStringTools
 {
     //1 - REVERSE STRING
-    public static String reverse(String s)
+   public static String reverse(String s) {
+       int c = 1;
+       int j = 1;
+       for (int i = 0; i < s.length(); i++) {
+           if (s.charAt(i) == ' ') {
+               c++;
+           }
+           String s1[] = new String[c];
+           String s2 = "";
+           for (j = 0; i < s1.length; j++) {
+               s1[i] = "";
+               while (j < s.length()) {
 
-    {
-        Pattern pattern = Pattern.compile("\\str");
+               }
+           }
+       }
+       return s;
+   }
 
-        // splitting String str with a pattern
-        // (i.e )splitting the string whenever their
-        //  is whitespace and store in temp array.
-        String[] temp = pattern.split(s);
-        String result = " ";
-        for (int i = 0; i < s.length(); i++) {
-            if (i == s.length() - 1) {
-                result = s[i] + result;
-            }
-            else
-                result = " " + s[i] + result;
-        }
-        return result;
-    }
+
+
+
     
     //2 - FORMAT INITIALS OF STRING
-    public static String initials(String s) 
+    public static String initials(String s)
     {
 
-        return null;
+        if (s.length() == 0) {
+            return s;
+        }
+
+        System.out.print(Character.toUpperCase(
+                s.charAt(0)));
+
+
+        for (int i = 1; i < s.length() - 1; i++) {
+            if (s.charAt(i) == ' ')
+                System.out.print(" " + Character.toUpperCase(
+                        s.charAt(i + 1)));
+        }
+        return s;
     }
         
     //3 - FIND MOST FREQUENT CHARACTER FROM STRING
-    public static String mostFrequent(String s) 
+    public static char mostFrequent(String s)
     {
-        return null;
+        final int ASCII_SIZE = 256;
+
+        int count[] = new int[ASCII_SIZE];
+
+
+        int len = s.length();
+        for (int i=0; i<len; i++)
+            count[s.charAt(i)]++;
+
+        int max = -1;
+        char result = ' ';
+
+
+        for (int i = 0; i < len; i++) {
+            if (max < count[s.charAt(i)]) {
+                max = count[s.charAt(i)];
+                result = s.charAt(i);
+            }
+        }
+
+        return result;
     }
     
     //4 - CONVERT BINARY NUMBER TO DECIMALS
