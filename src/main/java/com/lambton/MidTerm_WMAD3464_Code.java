@@ -22,7 +22,7 @@ class C0772144Main{
         System.out.println("Input  : NULL");
         if(rev == null)
         {
-            System.out.println("Function returns NULL value");
+            System.out.println("Function returns NULL value")
         }else {
             System.out.println("Output : " + rev);
         }
