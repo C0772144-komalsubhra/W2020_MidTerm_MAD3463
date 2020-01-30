@@ -19,7 +19,7 @@ class C0772144Main{
         System.out.println("Output : " + rev);
 
         rev = LambtonStringTools.reverse();
-        System.out.println("Input  : NULL")
+        System.out.println("Input  : NULL");
         if(rev == null)
         {
             System.out.println("Function returns NULL value");
